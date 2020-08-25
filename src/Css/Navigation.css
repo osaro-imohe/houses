@@ -1,0 +1,67 @@
+.navigation{
+    height: 100%;
+    padding: 0;
+    position: fixed;
+}
+.navigationinner{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.logo{
+    width: 100%;
+    padding: 20px;
+    align-items: left;
+    text-align: left;
+    background-color: white;
+}
+.logotext{
+    margin: 0;
+    font-weight: bold;
+    color: black;
+}
+.navul{
+    height: 40%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: black;
+    padding: 0;
+    background-color: white;
+    text-align: left;
+    padding-left: 10px;
+    list-style-type: none;
+}
+.navs{
+    width: 100%;
+    height: 20%;   
+    padding: 0;
+}
+.navsinner{
+    text-align: center;
+    padding: 10px;
+}
+.navstext{
+    color: gray;
+    font-weight: 700;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+.row{
+    margin: 0;
+}
+.active{
+    border-right: 3px solid #2E1CC4;
+}
+.activetext{
+    color:black;
+}
+.anticon svg {
+    fill: gray;
+}
+#root > div > div > div > ul > li:nth-child(1) > div > div > span > svg{
+    fill:#2E1CC4;
+}
