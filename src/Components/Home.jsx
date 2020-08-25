@@ -11,7 +11,7 @@ const Home = () => {
   const { state, setState, loadHouses } = useContext(GlobalContext);
 
   useEffect(() => {
-    loadHouses(`http://app-homevision-staging.herokuapp.com/api_project/houses?page=${state.currentPage}&per_page=${state.housesPerPage}`)
+    loadHouses(`https://app-homevision-staging.herokuapp.com/api_project/houses?page=${state.currentPage}&per_page=${state.housesPerPage}`)
   }, [])
 
   const displayHouseCardLoader = (number) => { 
