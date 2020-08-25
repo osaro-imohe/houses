@@ -17,7 +17,7 @@ const Home = () => {
   const displayHouseCardLoader = (number) => { 
     const number_array =  [...Array(number).keys()];
     return number_array.map((num) => (
-        <HouseCardLoader key={num}/>
+        <HouseCardLoader`` key={num}/>
     ))
   }
 
