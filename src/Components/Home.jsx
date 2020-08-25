@@ -45,7 +45,7 @@ const Home = () => {
         ...prevState,
         loading: true,
       }))
-      loadHouses(`http://app-homevision-staging.herokuapp.com/api_project/houses?page=${state.currentPage}&per_page=${state.housesPerPage}`)
+      loadHouses(`https://app-homevision-staging.herokuapp.com/api_project/houses?page=${state.currentPage}&per_page=${state.housesPerPage}`)
     }
   }
   return (
