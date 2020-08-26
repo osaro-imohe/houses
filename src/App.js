@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import './App.css';
 import Navigation from './Components/Navigation';
@@ -8,7 +9,7 @@ function App() {
   return (
     <GlobalContextProvider>
       <div className="App">
-        <Navigation/>
+        <Navigation />
         <Home />
       </div>
     </GlobalContextProvider>
