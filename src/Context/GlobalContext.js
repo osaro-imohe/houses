@@ -27,7 +27,7 @@ const GlobalContextProvider = ({ children }) => {
       .then((res) => {
         switch (res.status) {
           case 200:
-            // returns okay add houses to state
+            // returns okay add houses to state.houses array
             setState((prevState) => ({
               ...prevState,
               houses: [...state.houses, ...res.data.houses],
