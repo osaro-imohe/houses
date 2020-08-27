@@ -7,10 +7,11 @@ import { GlobalContext } from '../Context/GlobalContext';
 
 const Home = () => {
   const { state, loadHouses } = useContext(GlobalContext);
+  const url = `https://app-homevision-staging.herokuapp.com/api_project/houses?page=${state.currentPage}&per_page=${state.housesPerPage}`;
 
   // load houses from api on initial page load
   useEffect(() => {
-    loadHouses(`https://app-homevision-staging.herokuapp.com/api_project/houses?page=${state.currentPage}&per_page=${state.housesPerPage}`);
+    loadHouses(url);
   }, []);
 
   // while state.loading is true display skeleton loaders
@@ -41,8 +42,8 @@ const Home = () => {
   // once a user scrolls to the bottom fire function to load more houses
   const handleScroll = (e) => {
     const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
-    if (bottom) {
-      loadHouses(`https://app-homevision-staging.herokuapp.com/api_project/houses?page=${state.currentPage}&per_page=${state.housesPerPage}`);
+    if (bottom & !state.loading) {
+      loadHouses(url);
     }
   };
 
