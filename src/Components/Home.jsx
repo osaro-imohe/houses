@@ -22,7 +22,7 @@ const Home = () => {
     ));
   };
 
-  // return house card for each object in state.houses
+  // return house card for each object in state.houses array
   const displayHouseCards = () => state.houses.map((house) => (
     <HouseCard house={house} key={house.id} />
   ));
