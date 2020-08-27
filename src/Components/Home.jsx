@@ -31,7 +31,7 @@ const Home = () => {
   const handleError = () => {
     switch (state.showError) {
       case true:
-        return <ErrorMessage />;
+        return <ErrorMessage url={url}/>;
       case false:
         return null;
       default:
@@ -42,7 +42,7 @@ const Home = () => {
   // once a user scrolls to the bottom fire function to load more houses
   const handleScroll = (e) => {
     const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
-    if (bottom & !state.loading) {
+    if (bottom && !state.loading && !state.showError) {
       loadHouses(url);
     }
   };

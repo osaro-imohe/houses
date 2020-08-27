@@ -12,6 +12,13 @@
     margin: 0;
     font-weight: 300;
     color: #2E1CC4;
+    padding: 5px;
+}
+.errorbuttontext{
+    margin: 0;
+    font-weight: 300;
+    color: white;
+    padding: 5px;
 }
 .erroricon{
     width: 50px;
@@ -21,4 +28,14 @@
     width: 35px;
     height: 35px;
     margin-bottom: 20px;
+}
+.errorbutton{
+    background-color: #2e1cc4 !important;
+    width: 200px;
+    border-radius: 3px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: none;
+    margin-top: 5px;
 }
