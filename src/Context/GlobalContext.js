@@ -14,17 +14,20 @@ const GlobalContextProvider = ({ children }) => {
     housesPerPage: 10,
   });
 
+  // function to load houses from the homevision api
   const loadHouses = (url) => {
+    // set loading to true to show loader modals
     setState((prevState) => ({
       ...prevState,
       loading: true,
       showError: false,
     }));
+    // axios get request to api
     axios.get(url)
       .then((res) => {
-        // don't forget to catch error for no internet
         switch (res.status) {
           case 200:
+            // returns okay add houses to state
             setState((prevState) => ({
               ...prevState,
               houses: [...state.houses, ...res.data.houses],
@@ -37,7 +40,8 @@ const GlobalContextProvider = ({ children }) => {
             return null;
         }
       })
-      .catch((err) => {
+      .catch(() => {
+        // in case of error, show error modal
         setState((prevState) => ({
           ...prevState,
           loading: false,
