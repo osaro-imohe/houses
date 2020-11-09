@@ -23,3 +23,15 @@
     align-self: left;
     border-radius: 5px;
 }
+.logo{
+    width: 100%;
+    padding: 20px;
+    align-items: left;
+    text-align: left;
+    background-color: white;
+}
+.logotext{
+    margin: 0;
+    font-weight: bold;
+    color: black;
+}

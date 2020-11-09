@@ -1,8 +1,18 @@
 import React from 'react';
 import '../Css/HouseCard.css';
 
-const HouseCardLoader = ({ house }) => (
-  <div className="housecardcontainer col-sm-4">
+type house = {
+  address: string,
+  homeowner: string,
+  id: number,
+  photoURL: string,
+  price: number
+}
+
+const HouseCardLoader = ({ house }:{house:house}) => {
+  
+  return (
+    <div className="housecardcontainer col-sm-4">
     <div className="housecard">
 
       <div className="housecardimageholder">
@@ -18,6 +28,7 @@ const HouseCardLoader = ({ house }) => (
       </div>
     </div>
   </div>
-);
+  )
+};
 
 export default HouseCardLoader;
